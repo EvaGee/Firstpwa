@@ -1,0 +1,60 @@
+
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#2196f3"/>
+  
+    <title>My First pwa</title>
+    <link rel="manifest" href="manifest.json"/>
+    <!-- update the version number as needed -->
+    <script defer src="/__/firebase/6.3.4/firebase-app.js"></script>
+    <!-- include only the Firebase features as you need -->
+    <script defer src="/__/firebase/6.3.4/firebase-auth.js"></script>
+    <script defer src="/__/firebase/6.3.4/firebase-database.js"></script>
+    <script defer src="/__/firebase/6.3.4/firebase-messaging.js"></script>
+    <script defer src="/__/firebase/6.3.4/firebase-storage.js"></script>
+    <!-- initialize the SDK after all desired features are loaded -->
+    <script defer src="/__/firebase/init.js"></script>
+    <script>
+        // Initialize Firebase
+        var config = {
+          apiKey: "AIzaSyCQlKHEVqI5-gSw8HENdFjRQYMBM2NTR0A",
+          authDomain: "firstpwa-420f0.firebaseapp.com",
+          databaseURL: "https://firstpwa-420f0.firebaseio.com",
+          projectId: "firstpwa-420f0",
+          storageBucket: "firstpwa-420f0.appspot.com",
+          messagingSenderId: "616088241539"
+        };
+        
+      </script>
+
+    
+  </head>
+  <body style="background-color:#E6E6FA">
+  
+      <h2 style="text-align:center"; >Welcome</h2>
+      <h1 style="color:blueviolet">Hello world</h1>
+      <p style="color:blue">This is my first pwa</p>
+
+
+    <script>
+      if ('serviceWorker' in navigator)
+        {
+          window.addEventListener('load', function() 
+          {
+            navigator.serviceWorker.register('/sw.js').then(function(registration) 
+            {
+            // Registration was successful
+              console.log('ServiceWorker registration successful with scope: ', registration.scope);
+            }, 
+            function(err) 
+            {
+              // registration failed :(
+              console.log('ServiceWorker registration failed: ', err);
+            });
+          });
+        }
+    </script>
+  </body>
+</html>
